@@ -1,5 +1,10 @@
 <Alloy>
-	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
+	<Window>
+		<Label class="top20 margin" text="Login"></Label>
+		<TextField class="top20 margin" id="txtLogin"></TextField>
+		<Label class="top20 margin">Senha</Label>
+		<TextField class="top20 margin" id="txtSenha"></TextField>
+		<Button class="top20 margin" onClick="login">Acessar</Button>
+		<Button class="top20 margin" onClick="register">Registrar</Button>
 	</Window>
 </Alloy>

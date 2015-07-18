@@ -7,5 +7,6 @@
 	"os:ios": {},
 	"os:mobileweb": {},
 	"os:windows": {},
-	"dependencies": {}
+	 "dependencies": {}
 }
+

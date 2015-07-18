@@ -1,8 +1,0 @@
-"C:/Users/james_000/Documents/Appcelerator_Studio_Workspace/TiBikePaths/build/android/gen/android/support/v7/appcompat/R.java"
-"C:/Users/james_000/Documents/Appcelerator_Studio_Workspace/TiBikePaths/build/android/gen/br/com/jamesson/tibikepaths/ApplicationStylesheet.java"
-"C:/Users/james_000/Documents/Appcelerator_Studio_Workspace/TiBikePaths/build/android/gen/br/com/jamesson/tibikepaths/AssetCryptImpl.java"
-"C:/Users/james_000/Documents/Appcelerator_Studio_Workspace/TiBikePaths/build/android/gen/br/com/jamesson/tibikepaths/R.java"
-"C:/Users/james_000/Documents/Appcelerator_Studio_Workspace/TiBikePaths/build/android/gen/br/com/jamesson/tibikepaths/TibikepathsActivity.java"
-"C:/Users/james_000/Documents/Appcelerator_Studio_Workspace/TiBikePaths/build/android/gen/br/com/jamesson/tibikepaths/TibikepathsAppInfo.java"
-"C:/Users/james_000/Documents/Appcelerator_Studio_Workspace/TiBikePaths/build/android/gen/br/com/jamesson/tibikepaths/TibikepathsApplication.java"
-"C:/Users/james_000/Documents/Appcelerator_Studio_Workspace/TiBikePaths/build/android/gen/ti/modules/titanium/ui/R.java"
