@@ -9,18 +9,32 @@ function __processArg(obj, key) {
 
 function Controller() {
     function login() {
+        validAccess($.txtLogin.value, $.txtSenha.value);
+    }
+    function validAccess(pLogin, pPass) {
         var users = Alloy.createCollection("user");
         users.fetch();
         var filterUsers = users.where({
-            email: $.txtLogin.value,
-            password: $.txtSenha.value
+            email: pLogin,
+            password: pPass
         });
-        alert(filterUsers.length > 0 ? "Acesso liberado" : "Acesso negado.");
+        if (filterUsers.length > 0) {
+            Ti.App.Properties.setString("bikepaths_login", pLogin);
+            Ti.App.Properties.setString("bikepaths_pass", pPass);
+            Ti.App.Properties.setBool("bikepaths_access", true);
+            var ctrl = Alloy.createController("viewBikePaths");
+            var win = ctrl.getView();
+            win.open();
+            close();
+        } else alert("Acesso negado.");
     }
     function addUser() {
         var ctrl = Alloy.createController("viewAddUser");
         var win = ctrl.getView();
         win.open();
+    }
+    function close() {
+        $.index.close();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "index";
@@ -99,6 +113,11 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     $.index.open();
+    if (Ti.App.Properties.getBool("bikepaths_access")) {
+        var login = Ti.App.Properties.getString("bikepaths_login");
+        var pass = Ti.App.Properties.getString("bikepaths_pass");
+        validAccess(login, pass);
+    }
     __defers["$.__views.__alloyId2!click!login"] && $.__views.__alloyId2.addEventListener("click", login);
     __defers["$.__views.__alloyId3!click!addUser"] && $.__views.__alloyId3.addEventListener("click", addUser);
     _.extend($, exports);

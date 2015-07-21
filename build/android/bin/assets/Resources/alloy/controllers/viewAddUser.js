@@ -15,7 +15,10 @@ function Controller() {
             password: $.txtPass.value
         });
         user.save();
-        alert("Usuário cadastrado!");
+        close();
+    }
+    function close() {
+        $.viewAddUser.close();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "viewAddUser";
