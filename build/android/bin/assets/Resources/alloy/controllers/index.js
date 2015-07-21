@@ -9,12 +9,7 @@ function __processArg(obj, key) {
 
 function Controller() {
     function login() {
-        alert("unibratec" == $.txtLogin.value && "unit" == $.txtSenha.value || "admin" == $.txtLogin.value && "unit" == $.txtSenha.value ? "Acesso liberado" : "Acesso negado");
-    }
-    function register() {
-        var ctrl = Alloy.createController("register");
-        var win = ctrl.getView();
-        win.open();
+        alert("unibratec" == $.txtLogin.value && "unit" == $.txtSenha.value || "admin" == $.txtLogin.value && "unit" == $.txtSenha.value ? "Acesso liberado" : "Acesso negado.");
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "index";

@@ -9,10 +9,16 @@ function __processArg(obj, key) {
 
 function Controller() {
     function login() {
-        alert("unibratec" == $.txtLogin.value && "unit" == $.txtSenha.value || "admin" == $.txtLogin.value && "unit" == $.txtSenha.value ? "Acesso liberado" : "Acesso negado");
+        var users = Alloy.createCollection("user");
+        users.fetch();
+        var filterUsers = users.where({
+            email: $.txtLogin.value,
+            password: $.txtSenha.value
+        });
+        alert(filterUsers.length > 0 ? "Acesso liberado" : "Acesso negado.");
     }
-    function register() {
-        var ctrl = Alloy.createController("register");
+    function addUser() {
+        var ctrl = Alloy.createController("viewAddUser");
         var win = ctrl.getView();
         win.open();
     }
@@ -89,12 +95,12 @@ function Controller() {
         id: "__alloyId3"
     });
     $.__views.index.add($.__views.__alloyId3);
-    register ? $.__views.__alloyId3.addEventListener("click", register) : __defers["$.__views.__alloyId3!click!register"] = true;
+    addUser ? $.__views.__alloyId3.addEventListener("click", addUser) : __defers["$.__views.__alloyId3!click!addUser"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     $.index.open();
     __defers["$.__views.__alloyId2!click!login"] && $.__views.__alloyId2.addEventListener("click", login);
-    __defers["$.__views.__alloyId3!click!register"] && $.__views.__alloyId3.addEventListener("click", register);
+    __defers["$.__views.__alloyId3!click!addUser"] && $.__views.__alloyId3.addEventListener("click", addUser);
     _.extend($, exports);
 }
 

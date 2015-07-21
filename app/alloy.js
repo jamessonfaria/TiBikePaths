@@ -9,3 +9,6 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+
+// collection user defined as a global
+Alloy.Collections.Users = Alloy.createCollection('user');

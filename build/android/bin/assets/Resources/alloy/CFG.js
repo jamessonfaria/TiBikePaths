@@ -1,1 +1,1 @@
-module.exports={"dependencies":{"com.imobicloud.radio":"1.0"}};
+module.exports={"dependencies":{}};
