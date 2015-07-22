@@ -2113,7 +2113,17 @@ containing a value of this type.
         /**  Content description for the Toolbar icon used to collapse an expanded action mode. [CHAR LIMIT=NONE] 
          */
         public static final int abc_toolbar_collapse_description=0x7f0a0004;
+        public static final int access=0x7f0a0013;
+        public static final int access_invalid=0x7f0a001b;
         public static final int app_name=0x7f0a0011;
+        public static final int email=0x7f0a0014;
+        public static final int input_email=0x7f0a0018;
+        public static final int input_name=0x7f0a0017;
+        public static final int input_pass=0x7f0a0019;
+        public static final int name=0x7f0a0016;
+        public static final int new_register=0x7f0a0012;
+        public static final int password=0x7f0a0015;
+        public static final int save=0x7f0a001a;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0b0040;

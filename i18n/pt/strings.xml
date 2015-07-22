@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="new_register">Cadastrar</string>
+	<string name="access">Acessar</string>
+	<string name="email">E-mail</string>
+	<string name="password">Senha</string>
+	<string name="name">Nome</string>
+	<string name="input_name">Digite o seu nome</string>
+	<string name="input_email">Digite o seu e-mail</string>
+	<string name="input_pass">Digite a sua senha</string>
+	<string name="save">Salvar</string>
+	<string name="access_invalid">E-mail ou senha inválidos!</string>
+</resources>

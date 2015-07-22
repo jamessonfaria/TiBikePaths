@@ -1,10 +1,10 @@
 <Alloy>
 	<Window>
-		<Label class="top20 margin" text="Login"></Label>
+		<Label id="emailLabel" class="top20 margin"></Label>
 		<TextField class="top20 margin" id="txtLogin"></TextField>
-		<Label class="top20 margin">Senha</Label>
+		<Label id="passLabel" class="top20 margin"></Label>
 		<TextField class="top20 margin" id="txtSenha"></TextField>
-		<Button class="top20 margin" onClick="login">Acessar</Button>
-		<Button class="top20 margin" onClick="addUser">Registrar</Button>
+		<Button id="access" class="top20 margin" onClick="login"></Button>
+		<Button id="register" class="top20 margin" onClick="addUser"></Button>
 	</Window>
 </Alloy>

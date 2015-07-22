@@ -42,74 +42,74 @@ function Controller() {
         id: "viewAddUser"
     });
     $.__views.viewAddUser && $.addTopLevelView($.__views.viewAddUser);
-    $.__views.__alloyId4 = Ti.UI.createLabel({
+    $.__views.lblName = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
         top: "20",
         left: "20",
         right: "20",
-        text: "Nome",
-        id: "__alloyId4"
+        textid: "name",
+        id: "lblName"
     });
-    $.__views.viewAddUser.add($.__views.__alloyId4);
+    $.__views.viewAddUser.add($.__views.lblName);
     $.__views.txtName = Ti.UI.createTextField({
         top: "20",
         left: "20",
         right: "20",
-        hintText: "Digite o seu Nome",
+        hintText: L("input_name"),
         id: "txtName"
     });
     $.__views.viewAddUser.add($.__views.txtName);
-    $.__views.__alloyId5 = Ti.UI.createLabel({
+    $.__views.lblEmail = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
         top: "20",
         left: "20",
         right: "20",
-        text: "Email",
-        id: "__alloyId5"
+        textid: "email",
+        id: "lblEmail"
     });
-    $.__views.viewAddUser.add($.__views.__alloyId5);
+    $.__views.viewAddUser.add($.__views.lblEmail);
     $.__views.txtEmail = Ti.UI.createTextField({
         top: "20",
         left: "20",
         right: "20",
-        hintText: "Digite o seu Email",
+        hintText: L("input_email"),
         id: "txtEmail"
     });
     $.__views.viewAddUser.add($.__views.txtEmail);
-    $.__views.__alloyId6 = Ti.UI.createLabel({
+    $.__views.lblPass = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
         top: "20",
         left: "20",
         right: "20",
-        text: "Senha",
-        id: "__alloyId6"
+        textid: "password",
+        id: "lblPass"
     });
-    $.__views.viewAddUser.add($.__views.__alloyId6);
+    $.__views.viewAddUser.add($.__views.lblPass);
     $.__views.txtPass = Ti.UI.createTextField({
         top: "20",
         left: "20",
         right: "20",
-        hintText: "Digite a sua senha",
+        hintText: L("input_pass"),
         passwordMask: true,
         id: "txtPass"
     });
     $.__views.viewAddUser.add($.__views.txtPass);
-    $.__views.__alloyId7 = Ti.UI.createButton({
+    $.__views.btnSave = Ti.UI.createButton({
         top: "20",
         left: "20",
         right: "20",
-        title: "Registrar",
-        id: "__alloyId7"
+        titleid: "save",
+        id: "btnSave"
     });
-    $.__views.viewAddUser.add($.__views.__alloyId7);
-    addUser ? $.__views.__alloyId7.addEventListener("click", addUser) : __defers["$.__views.__alloyId7!click!addUser"] = true;
+    $.__views.viewAddUser.add($.__views.btnSave);
+    addUser ? $.__views.btnSave.addEventListener("click", addUser) : __defers["$.__views.btnSave!click!addUser"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};
-    __defers["$.__views.__alloyId7!click!addUser"] && $.__views.__alloyId7.addEventListener("click", addUser);
+    __defers["$.__views.btnSave!click!addUser"] && $.__views.btnSave.addEventListener("click", addUser);
     _.extend($, exports);
 }
 

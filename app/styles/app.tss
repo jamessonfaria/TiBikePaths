@@ -3,15 +3,15 @@
 }
 
 "#txtEmail" :{
-	hintText: 'Digite o seu Email'	
+	hintText:L('input_email')	
 }
 
 "#txtName" :{
-	hintText: 'Digite o seu Nome'	
+	hintText:L('input_name') 	
 }
 
 "#txtPass" :{
-	hintText: 'Digite a sua senha',
+	hintText:L('input_pass'),
 	passwordMask:true
 }
 

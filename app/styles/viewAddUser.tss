@@ -1,0 +1,15 @@
+"#lblName":{
+	textid: 'name'
+}
+
+"#lblEmail":{
+	textid: 'email'
+}
+
+"#lblPass":{
+	textid: 'password'
+}
+
+"#btnSave":{
+	titleid: 'save'
+}

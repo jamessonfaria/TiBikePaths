@@ -29,13 +29,13 @@ function Controller() {
         id: "viewBikePaths"
     });
     $.__views.viewBikePaths && $.addTopLevelView($.__views.viewBikePaths);
-    $.__views.__alloyId8 = Ti.UI.createLabel({
+    $.__views.__alloyId0 = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
         text: "olaaaaaaaaaaa",
-        id: "__alloyId8"
+        id: "__alloyId0"
     });
-    $.__views.viewBikePaths.add($.__views.__alloyId8);
+    $.__views.viewBikePaths.add($.__views.__alloyId0);
     exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};

@@ -30,7 +30,7 @@ function validAccess(pLogin, pPass){
 		
 		close();			
 	}else{
-		alert("Acesso negado.");
+		alert(L('access_invalid'));
 	}
 }
 

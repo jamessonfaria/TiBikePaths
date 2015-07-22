@@ -26,7 +26,7 @@ function Controller() {
             var win = ctrl.getView();
             win.open();
             close();
-        } else alert("Acesso negado.");
+        } else alert(L("access_invalid"));
     }
     function addUser() {
         var ctrl = Alloy.createController("viewAddUser");
@@ -58,16 +58,16 @@ function Controller() {
         id: "index"
     });
     $.__views.index && $.addTopLevelView($.__views.index);
-    $.__views.__alloyId0 = Ti.UI.createLabel({
+    $.__views.emailLabel = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
         top: "20",
         left: "20",
         right: "20",
-        text: "Login",
-        id: "__alloyId0"
+        textid: "email",
+        id: "emailLabel"
     });
-    $.__views.index.add($.__views.__alloyId0);
+    $.__views.index.add($.__views.emailLabel);
     $.__views.txtLogin = Ti.UI.createTextField({
         top: "20",
         left: "20",
@@ -75,16 +75,16 @@ function Controller() {
         id: "txtLogin"
     });
     $.__views.index.add($.__views.txtLogin);
-    $.__views.__alloyId1 = Ti.UI.createLabel({
+    $.__views.passLabel = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
         top: "20",
         left: "20",
         right: "20",
-        text: "Senha",
-        id: "__alloyId1"
+        textid: "password",
+        id: "passLabel"
     });
-    $.__views.index.add($.__views.__alloyId1);
+    $.__views.index.add($.__views.passLabel);
     $.__views.txtSenha = Ti.UI.createTextField({
         top: "20",
         left: "20",
@@ -92,24 +92,24 @@ function Controller() {
         id: "txtSenha"
     });
     $.__views.index.add($.__views.txtSenha);
-    $.__views.__alloyId2 = Ti.UI.createButton({
+    $.__views.access = Ti.UI.createButton({
         top: "20",
         left: "20",
         right: "20",
-        title: "Acessar",
-        id: "__alloyId2"
+        titleid: "access",
+        id: "access"
     });
-    $.__views.index.add($.__views.__alloyId2);
-    login ? $.__views.__alloyId2.addEventListener("click", login) : __defers["$.__views.__alloyId2!click!login"] = true;
-    $.__views.__alloyId3 = Ti.UI.createButton({
+    $.__views.index.add($.__views.access);
+    login ? $.__views.access.addEventListener("click", login) : __defers["$.__views.access!click!login"] = true;
+    $.__views.register = Ti.UI.createButton({
         top: "20",
         left: "20",
         right: "20",
-        title: "Registrar",
-        id: "__alloyId3"
+        titleid: "new_register",
+        id: "register"
     });
-    $.__views.index.add($.__views.__alloyId3);
-    addUser ? $.__views.__alloyId3.addEventListener("click", addUser) : __defers["$.__views.__alloyId3!click!addUser"] = true;
+    $.__views.index.add($.__views.register);
+    addUser ? $.__views.register.addEventListener("click", addUser) : __defers["$.__views.register!click!addUser"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     $.index.open();
@@ -118,8 +118,8 @@ function Controller() {
         var pass = Ti.App.Properties.getString("bikepaths_pass");
         validAccess(login, pass);
     }
-    __defers["$.__views.__alloyId2!click!login"] && $.__views.__alloyId2.addEventListener("click", login);
-    __defers["$.__views.__alloyId3!click!addUser"] && $.__views.__alloyId3.addEventListener("click", addUser);
+    __defers["$.__views.access!click!login"] && $.__views.access.addEventListener("click", login);
+    __defers["$.__views.register!click!addUser"] && $.__views.register.addEventListener("click", addUser);
     _.extend($, exports);
 }
 

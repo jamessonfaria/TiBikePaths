@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="new_register">Register</string>
+	<string name="access">Access</string>
+	<string name="email">E-mail</string>
+	<string name="password">Password</string>
+	<string name="name">Name</string>
+	<string name="input_name">Enter your name</string>
+	<string name="input_email">Enter your e-mail</string>
+	<string name="input_pass">Enter yout password</string>
+	<string name="save">Save</string>
+	<string name="access_invalid">E-mail or password invalid!</string>
+</resources>

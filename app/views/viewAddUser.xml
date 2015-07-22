@@ -1,12 +1,12 @@
 <Alloy>
 	<Window>
-		<Label class="top20 margin">Nome</Label>
+		<Label id="lblName" class="top20 margin"></Label>
 		<TextField class="top20 margin" id="txtName"></TextField>
-		<Label class="top20 margin">Email</Label>
+		<Label id="lblEmail" class="top20 margin"></Label>
 		<TextField class="top20 margin" id="txtEmail"></TextField>
-		<Label class="top20 margin">Senha</Label>
+		<Label id="lblPass" class="top20 margin"></Label>
 		<TextField class="top20 margin" id="txtPass"></TextField>
 		
-		<Button class="top20 margin" onClick="addUser">Registrar</Button>
+		<Button id="btnSave" class="top20 margin" onClick="addUser"></Button>
 	</Window>
 </Alloy>

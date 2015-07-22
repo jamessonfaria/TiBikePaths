@@ -1,0 +1,15 @@
+"#register":{
+	titleid: 'new_register'
+}
+
+"#access":{
+	titleid: 'access'
+}
+
+"#emailLabel":{
+	textid: 'email'
+}
+
+"#passLabel":{
+	textid: 'password'
+}
