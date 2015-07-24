@@ -12,3 +12,6 @@
 
 // collection user defined as a global
 Alloy.Collections.Users = Alloy.createCollection('user');
+
+// collection without Alloy and Model, using the backbone
+Alloy.Collections.BikePaths = new Backbone.Collection();

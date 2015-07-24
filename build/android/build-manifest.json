@@ -1,6 +1,6 @@
 {
 	"target": "device",
-	"deployType": "test",
+	"deployType": "development",
 	"classname": "Tibikepaths",
 	"platformPath": "C:\\ProgramData\\Titanium\\mobilesdk\\win32\\4.1.0.GA\\android",
 	"modulesHash": "d41d8cd98f00b204e9800998ecf8427e",
@@ -24,9 +24,10 @@
 	"encryptJS": true,
 	"minSDK": 14,
 	"targetSDK": 22,
-	"propertiesHash": "cabd5f029b0bb55056b987fbe8bdfbcb",
+	"propertiesHash": "579384171feb7473b54adcfc9be8deb5",
 	"activitiesHash": "d41d8cd98f00b204e9800998ecf8427e",
 	"servicesHash": "d41d8cd98f00b204e9800998ecf8427e",
 	"jssFilesHash": "d41d8cd98f00b204e9800998ecf8427e",
-	"jarLibHash": "8a934cc9c0df0925ce725ee24fd30372"
+	"jarLibHash": "239bf4dce48adabf466fc9e490fa748f",
+	"liveview": true
 }

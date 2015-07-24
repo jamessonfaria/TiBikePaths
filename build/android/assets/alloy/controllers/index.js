@@ -1,1 +1,128 @@
-function __processArg(t,e){var i=null;return t&&(i=t[e]||null,delete t[e]),i}function Controller(){function t(){e(s.txtLogin.value,s.txtSenha.value)}function e(t,e){var i=Alloy.createCollection("user");i.fetch();var s=i.where({email:t,password:e});if(s.length>0){Ti.App.Properties.setString("bikepaths_login",t),Ti.App.Properties.setString("bikepaths_pass",e),Ti.App.Properties.setBool("bikepaths_access",!0);var n=Alloy.createController("viewBikePaths"),o=n.getView();o.open(),r()}else alert(L("access_invalid"))}function i(){var t=Alloy.createController("viewAddUser"),e=t.getView();e.open()}function r(){s.index.close()}require("alloy/controllers/BaseController").apply(this,Array.prototype.slice.call(arguments)),this.__controllerPath="index",this.args=arguments[0]||{},arguments[0]&&(__processArg(arguments[0],"__parentSymbol"),__processArg(arguments[0],"$model"),__processArg(arguments[0],"__itemTemplate"));var s=this,n={},o={};if(s.__views.index=Ti.UI.createWindow({layout:"vertical",id:"index"}),s.__views.index&&s.addTopLevelView(s.__views.index),s.__views.emailLabel=Ti.UI.createLabel({width:Ti.UI.FILL,height:Ti.UI.SIZE,top:"20",left:"20",right:"20",textid:"email",id:"emailLabel"}),s.__views.index.add(s.__views.emailLabel),s.__views.txtLogin=Ti.UI.createTextField({top:"20",left:"20",right:"20",id:"txtLogin"}),s.__views.index.add(s.__views.txtLogin),s.__views.passLabel=Ti.UI.createLabel({width:Ti.UI.FILL,height:Ti.UI.SIZE,top:"20",left:"20",right:"20",textid:"password",id:"passLabel"}),s.__views.index.add(s.__views.passLabel),s.__views.txtSenha=Ti.UI.createTextField({top:"20",left:"20",right:"20",id:"txtSenha"}),s.__views.index.add(s.__views.txtSenha),s.__views.access=Ti.UI.createButton({top:"20",left:"20",right:"20",titleid:"access",id:"access"}),s.__views.index.add(s.__views.access),t?s.__views.access.addEventListener("click",t):o["$.__views.access!click!login"]=!0,s.__views.register=Ti.UI.createButton({top:"20",left:"20",right:"20",titleid:"new_register",id:"register"}),s.__views.index.add(s.__views.register),i?s.__views.register.addEventListener("click",i):o["$.__views.register!click!addUser"]=!0,n.destroy=function(){},_.extend(s,s.__views),s.index.open(),Ti.App.Properties.getBool("bikepaths_access")){var t=Ti.App.Properties.getString("bikepaths_login"),a=Ti.App.Properties.getString("bikepaths_pass");e(t,a)}o["$.__views.access!click!login"]&&s.__views.access.addEventListener("click",t),o["$.__views.register!click!addUser"]&&s.__views.register.addEventListener("click",i),_.extend(s,n)}var Alloy=require("alloy"),Backbone=Alloy.Backbone,_=Alloy._;module.exports=Controller;
+function __processArg(obj, key) {
+    var arg = null;
+    if (obj) {
+        arg = obj[key] || null;
+        delete obj[key];
+    }
+    return arg;
+}
+
+function Controller() {
+    function login() {
+        validAccess($.txtLogin.value, $.txtSenha.value);
+    }
+    function validAccess(pLogin, pPass) {
+        var users = Alloy.createCollection("user");
+        users.fetch();
+        var filterUsers = users.where({
+            email: pLogin,
+            password: pPass
+        });
+        if (filterUsers.length > 0) {
+            Ti.App.Properties.setString("bikepaths_login", pLogin);
+            Ti.App.Properties.setString("bikepaths_pass", pPass);
+            Ti.App.Properties.setBool("bikepaths_access", true);
+            var ctrl = Alloy.createController("viewBikePaths");
+            var win = ctrl.getView();
+            win.open();
+            close();
+        } else alert(L("access_invalid"));
+    }
+    function addUser() {
+        var ctrl = Alloy.createController("viewAddUser");
+        var win = ctrl.getView();
+        win.open();
+    }
+    function close() {
+        $.index.close();
+    }
+    require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
+    this.__controllerPath = "index";
+    this.args = arguments[0] || {};
+    if (arguments[0]) {
+        {
+            __processArg(arguments[0], "__parentSymbol");
+        }
+        {
+            __processArg(arguments[0], "$model");
+        }
+        {
+            __processArg(arguments[0], "__itemTemplate");
+        }
+    }
+    var $ = this;
+    var exports = {};
+    var __defers = {};
+    $.__views.index = Ti.UI.createWindow({
+        layout: "vertical",
+        id: "index"
+    });
+    $.__views.index && $.addTopLevelView($.__views.index);
+    $.__views.emailLabel = Ti.UI.createLabel({
+        width: Ti.UI.FILL,
+        height: Ti.UI.SIZE,
+        top: "20",
+        left: "20",
+        right: "20",
+        textid: "email",
+        id: "emailLabel"
+    });
+    $.__views.index.add($.__views.emailLabel);
+    $.__views.txtLogin = Ti.UI.createTextField({
+        top: "20",
+        left: "20",
+        right: "20",
+        id: "txtLogin"
+    });
+    $.__views.index.add($.__views.txtLogin);
+    $.__views.passLabel = Ti.UI.createLabel({
+        width: Ti.UI.FILL,
+        height: Ti.UI.SIZE,
+        top: "20",
+        left: "20",
+        right: "20",
+        textid: "password",
+        id: "passLabel"
+    });
+    $.__views.index.add($.__views.passLabel);
+    $.__views.txtSenha = Ti.UI.createTextField({
+        top: "20",
+        left: "20",
+        right: "20",
+        id: "txtSenha"
+    });
+    $.__views.index.add($.__views.txtSenha);
+    $.__views.access = Ti.UI.createButton({
+        top: "20",
+        left: "20",
+        right: "20",
+        titleid: "access",
+        id: "access"
+    });
+    $.__views.index.add($.__views.access);
+    login ? $.__views.access.addEventListener("click", login) : __defers["$.__views.access!click!login"] = true;
+    $.__views.register = Ti.UI.createButton({
+        top: "20",
+        left: "20",
+        right: "20",
+        titleid: "new_register",
+        id: "register"
+    });
+    $.__views.index.add($.__views.register);
+    addUser ? $.__views.register.addEventListener("click", addUser) : __defers["$.__views.register!click!addUser"] = true;
+    exports.destroy = function() {};
+    _.extend($, $.__views);
+    $.index.open();
+    if (Ti.App.Properties.getBool("bikepaths_access")) {
+        var login = Ti.App.Properties.getString("bikepaths_login");
+        var pass = Ti.App.Properties.getString("bikepaths_pass");
+        validAccess(login, pass);
+    }
+    __defers["$.__views.access!click!login"] && $.__views.access.addEventListener("click", login);
+    __defers["$.__views.register!click!addUser"] && $.__views.register.addEventListener("click", addUser);
+    _.extend($, exports);
+}
+
+var Alloy = require("alloy"), Backbone = Alloy.Backbone, _ = Alloy._;
+
+module.exports = Controller;

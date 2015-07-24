@@ -1,1 +1,74 @@
-function S4(){return(65536*(1+Math.random())|0).toString(16).substring(1)}function guid(){return S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4()}function InitAdapter(){throw"localStorage persistence supported only with MobileWeb."}function Sync(t,e,i){function r(t){localStorage.setItem(s,JSON.stringify(t))}var s=e.config.adapter.collection_name,n=e.config.data,o=null;switch(t){case"create":e.id||(e.id=guid(),e.set(e.idAttribute,e.id)),n[e.id]=e,r(n),o=e.toJSON();break;case"read":var a=localStorage.getItem(s),l=a&&JSON.parse(a)||{},c=0;for(var h in l){var d=new e.config.Model(l[h]);e.models.push(d),c++}e.length=c,o=1===c?e.models[0]:e.models;break;case"update":n[e.id]=e,r(n),o=e.toJSON();break;case"delete":delete n[e.id],r(n),o=e.toJSON()}o?(_.isFunction(i.success)&&i.success(o),"read"===t&&e.trigger("fetch")):_.isFunction(i.error)&&i.error(o)}var _=require("alloy/underscore")._;module.exports.sync=Sync,module.exports.beforeModelCreate=function(t){return t=t||{},t.data={},InitAdapter(),t},module.exports.afterModelCreate=function(t){return t=t||{},t.prototype.config.Model=t,t};
+function S4() {
+    return (65536 * (1 + Math.random()) | 0).toString(16).substring(1);
+}
+
+function guid() {
+    return S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4();
+}
+
+function InitAdapter() {
+    throw "localStorage persistence supported only with MobileWeb.";
+}
+
+function Sync(method, model, opts) {
+    function storeModel(data) {
+        localStorage.setItem(name, JSON.stringify(data));
+    }
+    var name = model.config.adapter.collection_name, data = model.config.data, resp = null;
+    switch (method) {
+      case "create":
+        if (!model.id) {
+            model.id = guid();
+            model.set(model.idAttribute, model.id);
+        }
+        data[model.id] = model;
+        storeModel(data);
+        resp = model.toJSON();
+        break;
+
+      case "read":
+        var store = localStorage.getItem(name);
+        var store_data = store && JSON.parse(store) || {};
+        var len = 0;
+        for (var key in store_data) {
+            var m = new model.config.Model(store_data[key]);
+            model.models.push(m);
+            len++;
+        }
+        model.length = len;
+        resp = 1 === len ? model.models[0] : model.models;
+        break;
+
+      case "update":
+        data[model.id] = model;
+        storeModel(data);
+        resp = model.toJSON();
+        break;
+
+      case "delete":
+        delete data[model.id];
+        storeModel(data);
+        resp = model.toJSON();
+    }
+    if (resp) {
+        _.isFunction(opts.success) && opts.success(resp);
+        "read" === method && model.trigger("fetch");
+    } else _.isFunction(opts.error) && opts.error(resp);
+}
+
+var _ = require("alloy/underscore")._;
+
+module.exports.sync = Sync;
+
+module.exports.beforeModelCreate = function(config) {
+    config = config || {};
+    config.data = {};
+    InitAdapter();
+    return config;
+};
+
+module.exports.afterModelCreate = function(Model) {
+    Model = Model || {};
+    Model.prototype.config.Model = Model;
+    return Model;
+};
