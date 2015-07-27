@@ -14,4 +14,7 @@
 Alloy.Collections.Users = Alloy.createCollection('user');
 
 // collection without Alloy and Model, using the backbone
-Alloy.Collections.BikePaths = new Backbone.Collection();
+// Alloy.Collections.BikePaths = new Backbone.Collection();
+
+// collection bikepath defined as a global
+Alloy.Collections.BikePaths = Alloy.createCollection('bikepath');

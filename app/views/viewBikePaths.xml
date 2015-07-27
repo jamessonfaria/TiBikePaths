@@ -1,9 +1,13 @@
 <Alloy>
 	<Window>
-	<TableView id="bpTableView" dataCollection="BikePaths">
+<!-->	<TableView id="bpTableView" dataCollection="BikePaths">
 			<TableViewRow id="row">				
 				<Label id="typeLabel" text="{Name}"></Label>
 			</TableViewRow>			
-	</TableView> 
+	</TableView>
+	-->
+	
+	<Label>aaaaaaaaaaaaaaa</Label>
+	 
 	</Window>
 </Alloy>

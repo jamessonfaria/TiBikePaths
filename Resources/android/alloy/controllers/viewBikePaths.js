@@ -8,26 +8,6 @@ function __processArg(obj, key) {
 }
 
 function Controller() {
-    function __alloyId4(e) {
-        if (e && e.fromAdapter) return;
-        __alloyId4.opts || {};
-        var models = __alloyId3.models;
-        var len = models.length;
-        var rows = [];
-        for (var i = 0; len > i; i++) {
-            var __alloyId0 = models[i];
-            __alloyId0.__transform = {};
-            var __alloyId1 = Ti.UI.createTableViewRow({});
-            rows.push(__alloyId1);
-            var __alloyId2 = Ti.UI.createLabel({
-                width: Ti.UI.FILL,
-                height: Ti.UI.SIZE,
-                text: "undefined" != typeof __alloyId0.__transform["Name"] ? __alloyId0.__transform["Name"] : __alloyId0.get("Name")
-            });
-            __alloyId1.add(__alloyId2);
-        }
-        $.__views.bpTableView.setData(rows);
-    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "viewBikePaths";
     this.args = arguments[0] || {};
@@ -49,20 +29,20 @@ function Controller() {
         id: "viewBikePaths"
     });
     $.__views.viewBikePaths && $.addTopLevelView($.__views.viewBikePaths);
-    $.__views.bpTableView = Ti.UI.createTableView({
-        id: "bpTableView"
+    $.__views.__alloyId0 = Ti.UI.createLabel({
+        width: Ti.UI.FILL,
+        height: Ti.UI.SIZE,
+        text: "aaaaaaaaaaaaaaa",
+        id: "__alloyId0"
     });
-    $.__views.viewBikePaths.add($.__views.bpTableView);
-    var __alloyId3 = Alloy.Collections["BikePaths"] || BikePaths;
-    __alloyId3.on("fetch destroy change add remove reset", __alloyId4);
-    exports.destroy = function() {
-        __alloyId3.off("fetch destroy change add remove reset", __alloyId4);
-    };
+    $.__views.viewBikePaths.add($.__views.__alloyId0);
+    exports.destroy = function() {};
     _.extend($, $.__views);
     arguments[0] || {};
     var srv = require("service");
+    var dt = require("data");
+    dt.getDbBikePaths();
     srv.getBikePaths(function(bikePaths) {
-        Alloy.Collections.BikePaths.reset(bikePaths);
     });
     _.extend($, exports);
 }

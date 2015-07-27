@@ -32,7 +32,7 @@ function Controller() {
     $.__views.__alloyId0 = Ti.UI.createLabel({
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
-        text: "Olaaaaaa",
+        text: "aaaaaaaaaaaaaaa",
         id: "__alloyId0"
     });
     $.__views.viewBikePaths.add($.__views.__alloyId0);
@@ -40,8 +40,9 @@ function Controller() {
     _.extend($, $.__views);
     arguments[0] || {};
     var srv = require("service");
+    var dt = require("data");
+    dt.getDbBikePaths();
     srv.getBikePaths(function(bikePaths) {
-        Alloy.Collections.BikePaths.reset(bikePaths);
     });
     _.extend($, exports);
 }
