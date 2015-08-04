@@ -72,40 +72,6 @@ public final class TibikepathsApplication extends TiApplication
 
 	
 
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
 
 
 	}
