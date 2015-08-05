@@ -1,9 +1,7 @@
 <Alloy>
 	<Window>
-		<TableView id="bpTableView" dataCollection="BikePaths">
-				<TableViewRow id="row">				
-					<Label id="typeLabel" text="{Name}"></Label>
-				</TableViewRow>			
+		<TableView onClick="showDetails" dataCollection="BikePaths">							
+				<TableViewRow rowid="{alloy_id}" title="{name}"></TableViewRow>			
 		</TableView>
 	</Window>
 </Alloy>

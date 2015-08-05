@@ -4,7 +4,11 @@ exports.definition = {
 		    "id": "int",
 		    "name": "text",
 		    "description": "text",
-		    "type": "text"
+		    "type": "text",
+		   	"latitude_start": "real",
+		    "longitude_start": "real",
+		   	"latitude_end": "real",
+		    "longitude_end": "real"
 		},
 		adapter: {
 			type: "sql",

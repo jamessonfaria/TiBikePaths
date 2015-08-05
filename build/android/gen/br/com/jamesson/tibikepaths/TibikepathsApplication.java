@@ -39,6 +39,9 @@ public final class TibikepathsApplication extends TiApplication
 		V8Runtime runtime = new V8Runtime();
 
 
+		runtime.addExternalModule("ti.map", ti.map.MapBootstrap.class);
+	
+
 
 		KrollRuntime.init(this, runtime);
 
@@ -73,6 +76,23 @@ public final class TibikepathsApplication extends TiApplication
 	
 
 
+
+		// Custom modules
+		KrollModuleInfo moduleInfo;
+	
+		
+
+		moduleInfo = new KrollModuleInfo(
+			"map", "ti.map", "f0d8fd44-86d2-4730-b67d-bd454577aeee", "2.3.1",
+			"External version of Map module to support new Google Map v2 sdk", "Hieu Pham", "Apache Public License v2",
+			"Copyright (c) 2013 by Appcelerator, Inc.");
+
+		
+
+		
+
+		KrollModule.addCustomModuleInfo(moduleInfo);
+	
 
 	}
 

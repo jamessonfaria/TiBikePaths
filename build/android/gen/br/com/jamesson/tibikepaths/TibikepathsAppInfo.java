@@ -33,7 +33,7 @@ public final class TibikepathsAppInfo implements ITiAppInfo
 	}
 
 	public String getPublisher() {
-		return "james_000";
+		return "jamesson";
 	}
 
 	public String getUrl() {
@@ -41,7 +41,7 @@ public final class TibikepathsAppInfo implements ITiAppInfo
 	}
 
 	public String getCopyright() {
-		return "2015 by james_000";
+		return "2015 by jamesson";
 	}
 
 	public String getDescription() {

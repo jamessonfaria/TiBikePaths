@@ -18,3 +18,4 @@ Alloy.Collections.Users = Alloy.createCollection('user');
 
 // collection bikepath defined as a global
 Alloy.Collections.BikePaths = Alloy.createCollection('bikepath');
+

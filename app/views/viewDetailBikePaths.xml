@@ -1,0 +1,7 @@
+<Alloy>
+	<Window>
+		<Label id="routeLabel" class="top20"></Label>	
+		<Label id="descLabel" class="top20"></Label>
+		<Label id="typeLabel" class="top20"></Label>			
+	</Window>
+</Alloy>

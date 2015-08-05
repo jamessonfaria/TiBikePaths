@@ -3,10 +3,10 @@
     <id>br.com.jamesson.tibikepaths</id>
     <name>TiBikePaths</name>
     <version>1.0</version>
-    <publisher>james_000</publisher>
+    <publisher>jamesson</publisher>
     <url>http://www.jamesson.com.br/tibikepaths</url>
     <description/>
-    <copyright>2015 by james_000</copyright>
+    <copyright>2015 by jamesson</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
@@ -38,7 +38,15 @@
             </dict>
         </plist>
     </ios>
-    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+	     <manifest>
+	     	<application>
+            	<!-- Replace "PASTE YOUR GOOGLE MAPS API KEY HERE" with the Google API key you obtained -->
+               	<meta-data
+                android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyC1sZ3wsbWLltbBd5VqlBLDj2wCjNSDXKc"/>
+        	</application>
+        </manifest>	
+    </android>
     <mobileweb>
         <precache/>
         <splash>
@@ -47,7 +55,9 @@
         </splash>
         <theme>default</theme>
     </mobileweb>
-    <modules/>
+    <modules>
+        <module platform="android">ti.map</module>
+    </modules>
     <deployment-targets>
         <target device="iphone">false</target>
         <target device="ipad">false</target>
