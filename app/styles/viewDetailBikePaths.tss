@@ -1,4 +1,3 @@
-
-".container" : {
-  
+"#mapButton":{
+	titleid: 'map_button'
 }

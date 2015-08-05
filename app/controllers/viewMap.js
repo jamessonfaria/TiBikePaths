@@ -2,26 +2,59 @@ var args = arguments[0] || {};
 
 // Using google maps
 
-$.viewMap.title = args.get('name');
+/*$.viewMap.title = args.get('name');
 
-/*var Map = require('ti.map');
+var Map = require('ti.map');
 
 var pathAnnotation = Map.createAnnotation({
-	latitude:fugitive.get('capturedLat'),
-	longitude:fugitive.get('capturedLong'),
-	title:fugitive.get('name'),
+	//latitude:args.get('latitude_start'),
+	//longitude:args.get('longitude_start'),
+	latitude: -33.87365,
+	loingitude: 151.20689, 	
+	title:args.get('name'),
 	pincolor:Map.ANNOTATION_RED
 });
 
 var mapView = Map.createView({
 	region:{
-		latitude:fugitive.get('capturedLat'),
-		longitude:fugitive.get('capturedLong'),
+		//latitude:args.get('latitude_start'),
+		//longitude:args.get('longitude_start'),
+		latitude: -33.87365,
+		loingitude: 151.20689,
+		
 		latitudeDelta:0.01,
 		longitudeDelta:0.01
 	},
 	mapType:Map.NORMAL_TYPE,
-	annotations:[capturedAnnotation]
+	annotations:[pathAnnotation]
 });
 
-$.map.add(mapView);*/
+$.viewMap.add(mapView);
+
+*/
+
+
+var MapModule = require('ti.map');
+
+var start = MapModule.createAnnotation({
+    latitude: args.get('latitude_start'), 
+    longitude: args.get('longitude_start'),     
+    pincolor: MapModule.ANNOTATION_AZURE, 
+    title: 'Start Route / Início da Rota'
+});
+
+var end = MapModule.createAnnotation({
+    latitude: args.get('latitude_end'), 
+    longitude: args.get('longitude_end'),
+    pincolor:MapModule.ANNOTATION_RED, 
+    title: 'End Route / Fim da Rota'
+});
+
+
+var mapview = MapModule.createView({
+    mapType: MapModule.NORMAL_TYPE,
+    region: {latitude: -8.09554, longitude: -34.91687, latitudeDelta: 0.1, longitudeDelta: 0.1 },
+    annotations: [start,end] //< add these annotations upon creation
+});
+
+$.viewMap.add(mapview);

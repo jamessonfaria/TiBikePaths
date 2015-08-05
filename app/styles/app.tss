@@ -29,3 +29,8 @@
 	left: '20',
 	right: '20'
 }
+
+".defaultButton":{
+	left: '20',
+	right: '20'
+}

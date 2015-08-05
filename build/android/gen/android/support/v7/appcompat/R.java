@@ -2623,6 +2623,7 @@ containing a value of this type.
         public static final int input_email=0x7f0a003a;
         public static final int input_name=0x7f0a0039;
         public static final int input_pass=0x7f0a003b;
+        public static final int map_button=0x7f0a003e;
         public static final int name=0x7f0a0038;
         public static final int new_register=0x7f0a0034;
         public static final int password=0x7f0a0037;
@@ -2632,7 +2633,7 @@ containing a value of this type.
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */
-        public static final int wallet_buy_button_place_holder=0x7f0a003e;
+        public static final int wallet_buy_button_place_holder=0x7f0a003f;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0b0040;

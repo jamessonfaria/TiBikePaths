@@ -53,9 +53,6 @@ exports.getDbBikePaths = function(){
 		
 		//Alloy.Collections.BikePaths.reset(bikePaths);	
 		
-	}else{
-		alert("nao cadastrei");
-		//Alloy.Collections.BikePaths.reset(bikePaths);
 	}
 	
 

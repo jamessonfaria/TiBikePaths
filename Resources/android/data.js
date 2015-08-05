@@ -5,7 +5,7 @@ exports.setDbBikePaths = function() {};
 exports.getDbBikePaths = function() {
     var collBikePaths = Alloy.createCollection("bikepath");
     collBikePaths.fetch();
-    collBikePaths.length <= 0 ? srv.getBikePaths(function(bikePaths) {
+    collBikePaths.length <= 0 && srv.getBikePaths(function(bikePaths) {
         var ret = bikePaths;
         var tot = 1;
         for (var i = 0; i < ret.length; i++) {
@@ -23,5 +23,5 @@ exports.getDbBikePaths = function() {
             modBikePath.save();
             tot++;
         }
-    }) : alert("nao cadastrei");
+    });
 };
