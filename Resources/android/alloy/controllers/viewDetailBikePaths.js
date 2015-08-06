@@ -38,6 +38,8 @@ function Controller() {
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
         top: "20",
+        left: "20",
+        right: "20",
         id: "routeLabel"
     });
     $.__views.viewDetailBikePaths.add($.__views.routeLabel);
@@ -45,6 +47,8 @@ function Controller() {
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
         top: "20",
+        left: "20",
+        right: "20",
         id: "descLabel"
     });
     $.__views.viewDetailBikePaths.add($.__views.descLabel);
@@ -52,6 +56,8 @@ function Controller() {
         width: Ti.UI.FILL,
         height: Ti.UI.SIZE,
         top: "20",
+        left: "20",
+        right: "20",
         id: "typeLabel"
     });
     $.__views.viewDetailBikePaths.add($.__views.typeLabel);
@@ -67,9 +73,9 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     var args = arguments[0] || {};
-    $.routeLabel.text = args.get("name");
-    $.descLabel.text = args.get("description");
-    $.typeLabel.text = args.get("type");
+    $.routeLabel.text = "Rota: " + args.get("name");
+    $.descLabel.text = "Descrição: " + args.get("description");
+    $.typeLabel.text = "Tipo: " + args.get("type");
     __defers["$.__views.mapButton!click!showMap"] && $.__views.mapButton.addEventListener("click", showMap);
     _.extend($, exports);
 }

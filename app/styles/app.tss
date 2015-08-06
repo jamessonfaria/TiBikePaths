@@ -34,3 +34,7 @@
 	left: '20',
 	right: '20'
 }
+
+"TableViewRow[platform=android]":{
+	height: '50'
+}

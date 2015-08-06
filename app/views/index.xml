@@ -1,5 +1,5 @@
 <Alloy>
-	<Window>
+	<Window>		
 		<Label id="emailLabel" class="top20 margin"></Label>
 		<TextField class="top20 margin" id="txtLogin"></TextField>
 		<Label id="passLabel" class="top20 margin"></Label>

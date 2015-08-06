@@ -18,11 +18,6 @@ function validAccess(pLogin, pPass){
 	// valid login and pass	
 	if (filterUsers.length > 0) {
 		
-		// save shared preferences
-		Ti.App.Properties.setString('bikepaths_login', pLogin);
-		Ti.App.Properties.setString('bikepaths_pass', pPass);
-		Ti.App.Properties.setBool('bikepaths_access', true);
-		
 		// access main screen
 		var ctrl = Alloy.createController('viewBikePaths');
 		var win = ctrl.getView();

@@ -39,13 +39,13 @@
         </plist>
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-	     <manifest>
-	     	<application>
-            	<!-- Replace "PASTE YOUR GOOGLE MAPS API KEY HERE" with the Google API key you obtained -->
-               	<meta-data
-                android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyC1sZ3wsbWLltbBd5VqlBLDj2wCjNSDXKc"/>
-        	</application>
-        </manifest>	
+        <manifest>
+            <application>
+                <!-- Replace "PASTE YOUR GOOGLE MAPS API KEY HERE" with the Google API key you obtained -->
+                <meta-data
+                    android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyC1sZ3wsbWLltbBd5VqlBLDj2wCjNSDXKc"/>
+            </application>
+        </manifest>
     </android>
     <mobileweb>
         <precache/>

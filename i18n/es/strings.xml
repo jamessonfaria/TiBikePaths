@@ -11,4 +11,5 @@
 	<string name="save">Guardar</string>
 	<string name="access_invalid">E-mail o contraseña no válidos</string>
 	<string name="map_button">Mostrar en el Mapa</string>
+	<string name="profile">Perfil</string>
 </resources>

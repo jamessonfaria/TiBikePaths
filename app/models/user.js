@@ -4,7 +4,8 @@ exports.definition = {
 		    "name": "text",
 		    "email": "text",
 		    "password": "text",
-		    "gender": "text"
+		    "gender": "text",
+		   	"photo": "text"
 		},
 		adapter: {
 			type: "sql",

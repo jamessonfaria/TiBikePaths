@@ -15,6 +15,10 @@ function Controller() {
             password: $.txtPass.value
         });
         user.save();
+        Ti.App.Properties.setString("bikepaths_name", $.txtName.value);
+        Ti.App.Properties.setString("bikepaths_login", $.txtEmail.value);
+        Ti.App.Properties.setString("bikepaths_pass", $.txtPass.value);
+        Ti.App.Properties.setBool("bikepaths_access", true);
         close();
     }
     function close() {

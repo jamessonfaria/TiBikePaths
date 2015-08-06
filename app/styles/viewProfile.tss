@@ -1,0 +1,5 @@
+"#photoImageView":{
+	width:150,
+	height:120,
+	image:'/images/no_image.png'
+}

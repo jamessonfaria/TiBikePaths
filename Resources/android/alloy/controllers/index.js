@@ -19,9 +19,6 @@ function Controller() {
             password: pPass
         });
         if (filterUsers.length > 0) {
-            Ti.App.Properties.setString("bikepaths_login", pLogin);
-            Ti.App.Properties.setString("bikepaths_pass", pPass);
-            Ti.App.Properties.setBool("bikepaths_access", true);
             var ctrl = Alloy.createController("viewBikePaths");
             var win = ctrl.getView();
             win.open();

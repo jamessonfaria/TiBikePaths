@@ -1,39 +1,6 @@
 var args = arguments[0] || {};
 
 // Using google maps
-
-/*$.viewMap.title = args.get('name');
-
-var Map = require('ti.map');
-
-var pathAnnotation = Map.createAnnotation({
-	//latitude:args.get('latitude_start'),
-	//longitude:args.get('longitude_start'),
-	latitude: -33.87365,
-	loingitude: 151.20689, 	
-	title:args.get('name'),
-	pincolor:Map.ANNOTATION_RED
-});
-
-var mapView = Map.createView({
-	region:{
-		//latitude:args.get('latitude_start'),
-		//longitude:args.get('longitude_start'),
-		latitude: -33.87365,
-		loingitude: 151.20689,
-		
-		latitudeDelta:0.01,
-		longitudeDelta:0.01
-	},
-	mapType:Map.NORMAL_TYPE,
-	annotations:[pathAnnotation]
-});
-
-$.viewMap.add(mapView);
-
-*/
-
-
 var MapModule = require('ti.map');
 
 var start = MapModule.createAnnotation({
@@ -57,4 +24,5 @@ var mapview = MapModule.createView({
     annotations: [start,end] //< add these annotations upon creation
 });
 
+// add map to view
 $.viewMap.add(mapview);

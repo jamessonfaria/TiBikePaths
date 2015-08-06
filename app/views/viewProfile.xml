@@ -1,0 +1,7 @@
+<Alloy>
+	<Window>		
+		<ImageView id="photoImageView" class="top20"></ImageView>
+		<Label id="nameLabel" class="top20 margin"></Label>
+		<Label id="emailLabel" class="top20 margin"></Label>		
+	</Window>
+</Alloy>

@@ -1,5 +1,8 @@
 <Alloy>
 	<Window>
+		<Menu platform="android">
+			<MenuItem id="edtProfile" platform="android" onClick="editProfile"></MenuItem>
+		</Menu>
 		<TableView onClick="showDetails" dataCollection="BikePaths">							
 				<TableViewRow rowid="{alloy_id}" title="{name}"></TableViewRow>			
 		</TableView>

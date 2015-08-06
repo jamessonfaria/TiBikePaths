@@ -1,9 +1,6 @@
 var srv = require('service');
 
-// function to setBikePaths
-exports.setDbBikePaths = function(){
-
-};
+// function to getBikePaths
 
 exports.getDbBikePaths = function(){
 
@@ -18,14 +15,7 @@ exports.getDbBikePaths = function(){
 			var tot = 1;
 			
 			for( var i=0; i < ret.length; i++ ){
-				//	alert(ret[i].properties.Name);	
-				//	Ti.API.info(ret[i].properties.Description);
-				//	Ti.API.info(ret[i].properties.Type);
-					
-				//	for (var col=0; col < ret[i].geometry.coordinates.length; col++){
-				//		Ti.API.info(ret[i].geometry.coordinates[col]);
-				//	}			
-				
+
 				// size to line json
 				var size = ret[i].geometry.coordinates.length;
 				
@@ -43,17 +33,16 @@ exports.getDbBikePaths = function(){
 				// save bikepath
 				modBikePath.save();
 				
+				Alloy.Collections.BikePaths.fetch();
+				
 				// increment tot
 				tot++;
 					
 			}
 
-	
 		}); 
-		
-		//Alloy.Collections.BikePaths.reset(bikePaths);	
-		
+	}else{
+		Alloy.Collections.BikePaths.fetch();
 	}
-	
 
 };

@@ -1,8 +1,8 @@
 <Alloy>
 	<Window>
-		<Label id="routeLabel" class="top20"></Label>	
-		<Label id="descLabel" class="top20"></Label>
-		<Label id="typeLabel" class="top20"></Label>		
+		<Label id="routeLabel" class="top20 margin"></Label>	
+		<Label id="descLabel" class="top20 margin"></Label>
+		<Label id="typeLabel" class="top20 margin"></Label>		
 		<Button id="mapButton" class="top20 defaultButton" onClick="showMap"></Button>		
 	</Window>
 </Alloy>

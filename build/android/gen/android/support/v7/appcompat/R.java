@@ -2627,13 +2627,14 @@ containing a value of this type.
         public static final int name=0x7f0a0038;
         public static final int new_register=0x7f0a0034;
         public static final int password=0x7f0a0037;
+        public static final int profile=0x7f0a003f;
         public static final int save=0x7f0a003c;
         public static final int store_picture_message=0x7f0a0013;
         public static final int store_picture_title=0x7f0a0012;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */
-        public static final int wallet_buy_button_place_holder=0x7f0a003f;
+        public static final int wallet_buy_button_place_holder=0x7f0a0040;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0b0040;
